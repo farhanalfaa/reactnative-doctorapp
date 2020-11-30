@@ -1,26 +1,36 @@
 import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import { colors, fonts } from '../../utils';
-import { ILLogo } from './../../assets/illustration';
+import {colors, fonts} from '../../utils';
+import {ILLogo} from './../../assets/illustration';
 
 const Splash = ({navigation}) => {
-    useEffect(() => {
-        setTimeout(() => {
-            navigation.replace('GetStarted');
-        }, 3000);
-    }, [navigation])
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('GetStarted');
+    }, 3000);
+  }, [navigation]);
 
-    return (
-        <View style={styles.page}>
-            <ILLogo />
-            <Text style={styles.title}>Welcome App</Text>
-        </View>
-    );  
+  return (
+    <View style={styles.page}>
+      <ILLogo />
+      <Text style={styles.title}>Welcome App</Text>
+    </View>
+  );
 };
 
 export default Splash;
 
 const styles = StyleSheet.create({
-    page: {backgroundColor: colors.white, flex: 1, alignItems: 'center', justifyContent: 'center'},
-    title: {fontSize: 20, fontFamily: fonts.primary[600], color: colors.text.primary, marginTop: 20}
+  page: {
+    backgroundColor: colors.white,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontFamily: fonts.primary[600],
+    color: colors.text.primary,
+    marginTop: 20,
+  },
 });
